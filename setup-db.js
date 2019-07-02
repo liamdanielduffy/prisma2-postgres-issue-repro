@@ -1,11 +1,11 @@
 const { execSync } = require('child_process')
 
-// const containers_running = execSync("docker ps -a -q").toString().length > 0
-// const stopAllContainers = () => execSync("docker stop $(docker ps -a -q)");
+const containers_running = execSync("docker ps -a -q").toString().length > 0
+const stopAllContainers = () => execSync("docker stop $(docker ps -a -q)");
 
-// if(containers_running) {
-//     stopAllContainers()
-// }
+if(containers_running) {
+    stopAllContainers()
+}
 
 const branch_head_commit_hash = execSync("git rev-parse HEAD").toString().trim();
 const dev_db_name_config = "--name " + branch_head_commit_hash
