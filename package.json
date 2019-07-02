@@ -2,10 +2,13 @@
   "name": "script",
   "license": "MIT",
   "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "dotenv": "^8.0.0",
     "ts-node": "^8.3.0",
     "typescript": "3.5.2"
   },
   "scripts": {
+    "setup-db": "node setup-db.js",
     "start": "ts-node src/script.ts",
     "seed": "ts-node prisma/seed.ts",
     "postinstall": "prisma2 generate",

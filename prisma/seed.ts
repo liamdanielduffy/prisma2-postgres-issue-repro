@@ -1,3 +1,6 @@
+import { resolve } from "path";
+import { config } from "dotenv";
+
 import Photon from '@generated/photon'
 
 const photon = new Photon()
